@@ -1,0 +1,254 @@
+FUNCTION  coc#client#get_channel()
+    Defined: ~/.config/nvim/plugged/coc.nvim/autoload/coc/client.vim:127
+Called 11 times
+Total time:   0.000453
+ Self time:   0.000453
+
+count  total (s)   self (s)
+   11              0.000083   if s:is_vim
+                                return a:client['channel']
+   11              0.000039   endif
+   11              0.000093   return a:client['chan_id']
+
+FUNCTION  coc#util#cursor()
+    Defined: ~/.config/nvim/plugged/coc.nvim/autoload/coc/util.vim:90
+Called 2 times
+Total time:   0.000099
+ Self time:   0.000099
+
+count  total (s)   self (s)
+    2              0.000041   let pos = getcurpos()
+    2              0.000033   let content = pos[2] == 1 ? '' : getline('.')[0: pos[2] - 2]
+    2              0.000019   return [pos[1] - 1, strchars(content)]
+
+FUNCTION  <SNR>61_notify()
+    Defined: ~/.config/nvim/plugged/coc.nvim/autoload/coc/client.vim:167
+Called 11 times
+Total time:   0.003773
+ Self time:   0.003320
+
+count  total (s)   self (s)
+   11   0.000980   0.000527   let channel = coc#client#get_channel(self)
+   11              0.000099   if empty(channel)
+                                return ''
+   11              0.000022   endif
+   11              0.000039   try
+   11              0.000045     if s:is_vim
+                                  call ch_sendraw(channel, json_encode([0, [a:method, a:args]])."\n")
+   11              0.000038     else
+   11              0.000915       call call('rpcnotify', [channel, a:method] + a:args)
+   11              0.000051     endif
+                              catch /.*/
+                                if v:exception =~# 'E475'
+                                  if get(g:, 'coc_vim_leaving', 0)
+                                    return
+                                  endif
+                                  echohl Error | echom '['.self.name.'] server connection lost' | echohl None
+                                  let name = self.name
+                                  call s:on_exit(name, 0)
+                                  execute 'silent do User ConnectionLost'.toupper(name[0]).name[1:]
+                                elseif v:exception =~# 'E12'
+                                  " neovim's bug, ignore it
+                                else
+                                  echohl Error | echo 'Error on notify ('.a:method.'): '.v:exception | echohl None
+                                endif
+   11              0.000055   endtry
+
+FUNCTION  lightline#link()
+    Defined: ~/.config/nvim/plugged/lightline.vim/autoload/lightline.vim:217
+Called 26 times
+Total time:   0.024424
+ Self time:   0.024424
+
+count  total (s)   self (s)
+   26              0.001089   let mode = get(s:lightline._mode_, a:0 ? a:1 : mode(), 'normal')
+   26              0.000227   if s:mode ==# mode
+   22              0.000117     return ''
+    4              0.000014   endif
+    4              0.000026   let s:mode = mode
+    4              0.000040   if !has_key(s:highlight, mode)
+                                call lightline#highlight(mode)
+    4              0.000008   endif
+    4              0.000275   let types = map(s:uniq(sort(filter(values(s:lightline.component_type), 'v:val !=# "raw"'))), '[v:val, 1]')
+   12              0.000143   for [p, l] in [['Left', len(s:lightline.active.left)], ['Right', len(s:lightline.active.right)]]
+   68              0.000468     for [i, t] in map(range(0, l), '[v:val, 0]') + types
+   60              0.000223       if i != l
+   52              0.001498         exec printf('hi link Lightline%s_active_%s Lightline%s_%s_%s', p, i, p, mode, i)
+   60              0.000117       endif
+  512              0.003291       for [j, s] in map(range(0, l), '[v:val, 0]') + types
+  452              0.002853         if i + 1 == j || t || s && i != l
+  292              0.008645           exec printf('hi link Lightline%s_active_%s_%s Lightline%s_%s_%s_%s', p, i, j, p, mode, i, j)
+  452              0.000842         endif
+  512              0.000989       endfor
+   68              0.000137     endfor
+   12              0.000030   endfor
+    4              0.000078   exec printf('hi link LightlineMiddle_active LightlineMiddle_%s', mode)
+    4              0.000018   return ''
+
+FUNCTION  <SNR>58_AsyncRequest()
+    Defined: ~/.config/nvim/plugged/coc.nvim/plugin/coc.vim:105
+Called 2 times
+Total time:   0.000925
+ Self time:   0.000222
+
+count  total (s)   self (s)
+    2              0.000059   let Cb = a:args[len(a:args) - 1]
+    2              0.000022   if type(Cb) == 2
+                                if !coc#rpc#ready()
+                                  call Cb('service not started', v:null)
+                                else
+                                  call coc#rpc#request_async(a:name, a:args[0:-2], Cb)
+                                endif
+                                return ''
+    2              0.000005   endif
+    2   0.000757   0.000054   call coc#rpc#notify(a:name, a:args)
+    2              0.000005   return ''
+
+FUNCTION  coc#rpc#ready()
+    Defined: ~/.config/nvim/plugged/coc.nvim/autoload/coc/rpc.vim:31
+Called 11 times
+Total time:   0.000458
+ Self time:   0.000458
+
+count  total (s)   self (s)
+   11              0.000260   if empty(s:client) || s:client['running'] == 0
+                                return 0
+   11              0.000033   endif
+   11              0.000049   return 1
+
+FUNCTION  lightline#mode()
+    Defined: ~/.config/nvim/plugged/lightline.vim/autoload/lightline.vim:212
+Called 26 times
+Total time:   0.000494
+ Self time:   0.000494
+
+count  total (s)   self (s)
+   26              0.000442   return get(s:lightline.mode_map, mode(), '')
+
+FUNCTION  CocActionAsync()
+    Defined: ~/.config/nvim/plugged/coc.nvim/plugin/coc.vim:75
+Called 2 times
+Total time:   0.001014
+ Self time:   0.000088
+
+count  total (s)   self (s)
+    2   0.001008   0.000083   return s:AsyncRequest('cocAction', a:000)
+
+FUNCTION  <SNR>58_Autocmd()
+    Defined: ~/.config/nvim/plugged/coc.nvim/plugin/coc.vim:204
+Called 9 times
+Total time:   0.006936
+ Self time:   0.000840
+
+count  total (s)   self (s)
+    9              0.000241   if !get(g:,'coc_workspace_initialized', 0)
+                                return
+    9              0.000039   endif
+    9   0.006534   0.000437   call coc#rpc#notify('CocAutocmd', a:000)
+
+FUNCTION  <SNR>49_CursorHoldUpdate()
+    Defined: ~/.config/nvim/plugged/vim-devicons/plugin/webdevicons.vim:387
+Called 2 times
+Total time:   0.000065
+ Self time:   0.000065
+
+count  total (s)   self (s)
+    2              0.000016   if g:NERDTreeUpdateOnCursorHold != 1
+                                return
+    2              0.000004   endif
+                            
+    2              0.000023   if !exists('g:NERDTree') || !g:NERDTree.IsOpen()
+    2              0.000006     return
+                              endif
+                            
+                              " Do not update when a special buffer is selected
+                              if !empty(&l:buftype)
+                                return
+                              endif
+                            
+                              " winnr need to make focus go to opened file
+                              " CursorToTreeWin needed to avoid error on opening file
+                              let l:winnr = winnr()
+                              let l:altwinnr = winnr('#')
+                            
+                              call g:NERDTree.CursorToTreeWin()
+                              call b:NERDTree.root.refreshFlags()
+                              call NERDTreeRender()
+                            
+                              exec l:altwinnr . 'wincmd w'
+                              exec l:winnr . 'wincmd w'
+
+FUNCTION  coc#status()
+    Defined: ~/.config/nvim/plugged/coc.nvim/autoload/coc.vim:119
+Called 26 times
+Total time:   0.003275
+ Self time:   0.002762
+
+count  total (s)   self (s)
+   26              0.000485   let info = get(b:, 'coc_diagnostic_info', {})
+   26              0.000139   let msgs = []
+   26              0.000221   if get(info, 'error', 0)
+                                call add(msgs, s:error_sign . info['error'])
+   26              0.000071   endif
+   26              0.000162   if get(info, 'warning', 0)
+                                call add(msgs, s:warning_sign . info['warning'])
+   26              0.000043   endif
+   26   0.001607   0.001093   return s:trim(join(msgs, ' ') . ' ' . get(g:, 'coc_status', ''))
+
+FUNCTION  coc#rpc#notify()
+    Defined: ~/.config/nvim/plugged/coc.nvim/autoload/coc/rpc.vim:95
+Called 11 times
+Total time:   0.006799
+ Self time:   0.002568
+
+count  total (s)   self (s)
+   11   0.000891   0.000433   if !coc#rpc#ready()
+                                return ''
+   11              0.000026   endif
+   11   0.004425   0.000652   call s:client['notify'](a:method, a:args)
+   11              0.000082   return ''
+
+FUNCTION  <SNR>88_trim()
+    Defined: ~/.config/nvim/plugged/coc.nvim/autoload/coc.vim:131
+Called 26 times
+Total time:   0.000513
+ Self time:   0.000513
+
+count  total (s)   self (s)
+   26              0.000242   if exists('*trim')
+   26              0.000197     return trim(a:str)
+                              endif
+                              return substitute(a:str, '\s\+$', '', '')
+
+FUNCTIONS SORTED ON TOTAL TIME
+count  total (s)   self (s)  function
+   26   0.024424             lightline#link()
+    9   0.006936   0.000840  <SNR>58_Autocmd()
+   11   0.006799   0.002568  coc#rpc#notify()
+   11   0.003773   0.003320  <SNR>61_notify()
+   26   0.003275   0.002762  coc#status()
+    2   0.001014   0.000088  CocActionAsync()
+    2   0.000925   0.000222  <SNR>58_AsyncRequest()
+   26   0.000513             <SNR>88_trim()
+   26   0.000494             lightline#mode()
+   11   0.000458             coc#rpc#ready()
+   11   0.000453             coc#client#get_channel()
+    2   0.000099             coc#util#cursor()
+    2   0.000065             <SNR>49_CursorHoldUpdate()
+
+FUNCTIONS SORTED ON SELF TIME
+count  total (s)   self (s)  function
+   26              0.024424  lightline#link()
+   11   0.003773   0.003320  <SNR>61_notify()
+   26   0.003275   0.002762  coc#status()
+   11   0.006799   0.002568  coc#rpc#notify()
+    9   0.006936   0.000840  <SNR>58_Autocmd()
+   26              0.000513  <SNR>88_trim()
+   26              0.000494  lightline#mode()
+   11              0.000458  coc#rpc#ready()
+   11              0.000453  coc#client#get_channel()
+    2   0.000925   0.000222  <SNR>58_AsyncRequest()
+    2              0.000099  coc#util#cursor()
+    2   0.001014   0.000088  CocActionAsync()
+    2              0.000065  <SNR>49_CursorHoldUpdate()
+

@@ -1,0 +1,130 @@
+
+
+times in msec
+ clock   self+sourced   self:  sourced script
+ clock   elapsed:              other lines
+
+000.015  000.015: --- NVIM STARTING ---
+001.092  001.077: locale set
+002.216  001.125: inits 1
+002.270  000.054: window checked
+002.421  000.151: parsing arguments
+002.547  000.125: expanding arguments
+002.687  000.140: inits 2
+004.193  001.506: init highlight
+004.631  000.439: waiting for UI
+008.472  003.841: done waiting for UI
+008.770  000.297: initialized screen early for UI
+009.169  000.124  000.124: sourcing $VIM/sysinit.vim
+012.159  002.818  002.818: sourcing /home/josiah/.config/nvim/autoload/plug.vim
+033.166  000.028  000.028: sourcing /home/josiah/.config/nvim/plugged/vim-node/ftdetect/node.vim
+048.444  000.019  000.019: sourcing /home/josiah/.config/nvim/plugged/vim-fugitive/ftdetect/fugitive.vim
+048.539  000.022  000.022: sourcing /home/josiah/.config/nvim/plugged/ultisnips/ftdetect/snippets.vim
+048.674  000.056  000.056: sourcing /home/josiah/.config/nvim/plugged/vim-mustache-handlebars/ftdetect/mustache.vim
+048.742  000.021  000.021: sourcing /home/josiah/.config/nvim/plugged/vim-pug/ftdetect/pug.vim
+048.847  000.061  000.061: sourcing /home/josiah/.config/nvim/plugged/Vim-Jinja2-Syntax/ftdetect/jinja.vim
+048.980  000.088  000.088: sourcing /home/josiah/.config/nvim/plugged/vim-liquid/ftdetect/liquid.vim
+049.065  000.024  000.024: sourcing /home/josiah/.config/nvim/plugged/tern_for_vim/ftdetect/tern.vim
+049.138  000.021  000.021: sourcing /home/josiah/.config/nvim/plugged/typescript-vim/ftdetect/typescript.vim
+049.198  000.019  000.019: sourcing /home/josiah/.config/nvim/plugged/vim-stylus/ftdetect/stylus.vim
+049.257  000.013  000.013: sourcing /home/josiah/.config/nvim/plugged/vim-less/ftdetect/less.vim
+049.329  000.017  000.017: sourcing /home/josiah/.config/nvim/plugged/scss-syntax.vim/ftdetect/scss.vim
+049.411  000.032  000.032: sourcing /home/josiah/.config/nvim/plugged/vim-markdown/ftdetect/markdown.vim
+049.531  000.048  000.048: sourcing /home/josiah/.config/nvim/plugged/vim-json/ftdetect/json.vim
+049.636  000.048  000.048: sourcing /home/josiah/.config/nvim/plugged/Dockerfile.vim/ftdetect/Dockerfile.vim
+049.674  000.022  000.022: sourcing /home/josiah/.config/nvim/plugged/Dockerfile.vim/ftdetect/docker-compose.vim
+049.902  000.014  000.014: sourcing /usr/share/vim/vimfiles/ftdetect/augeas.vim
+049.956  000.038  000.038: sourcing /usr/share/vim/vimfiles/ftdetect/dockerfile.vim
+050.010  000.036  000.036: sourcing /usr/share/vim/vimfiles/ftdetect/lf.vim
+050.081  011.344  010.744: sourcing /usr/share/nvim/runtime/filetype.vim
+050.463  000.044  000.044: sourcing /usr/share/nvim/runtime/ftplugin.vim
+050.829  000.036  000.036: sourcing /usr/share/nvim/runtime/indent.vim
+052.015  000.465  000.465: sourcing /usr/share/nvim/runtime/syntax/syncolor.vim
+052.218  000.973  000.507: sourcing /usr/share/nvim/runtime/syntax/synload.vim
+052.268  001.329  000.356: sourcing /usr/share/nvim/runtime/syntax/syntax.vim
+053.516  000.300  000.300: sourcing /usr/share/nvim/runtime/syntax/syncolor.vim
+054.629  000.265  000.265: sourcing /usr/share/nvim/runtime/syntax/syncolor.vim
+054.943  000.117  000.117: sourcing /home/josiah/.config/nvim/plugged/onedark.vim/autoload/onedark.vim
+092.485  040.118  039.437: sourcing /home/josiah/.config/nvim/plugged/onedark.vim/colors/onedark.vim
+093.218  000.639  000.639: sourcing /usr/share/nvim/runtime/syntax/nosyntax.vim
+094.788  000.328  000.328: sourcing /usr/share/nvim/runtime/syntax/syncolor.vim
+096.487  000.290  000.290: sourcing /usr/share/nvim/runtime/syntax/syncolor.vim
+123.472  029.835  029.217: sourcing /home/josiah/.config/nvim/plugged/onedark.vim/colors/onedark.vim
+123.635  030.074  000.239: sourcing /usr/share/nvim/runtime/syntax/synload.vim
+123.686  031.149  000.436: sourcing /usr/share/nvim/runtime/syntax/syntax.vim
+124.145  000.022  000.022: sourcing /usr/share/nvim/runtime/filetype.vim
+124.680  000.017  000.017: sourcing /usr/share/nvim/runtime/ftplugin.vim
+125.202  000.017  000.017: sourcing /usr/share/nvim/runtime/indent.vim
+126.353  000.443  000.443: sourcing /home/josiah/.config/nvim/bindings.vim
+126.408  117.158  029.793: sourcing /home/josiah/.config/nvim/init.vim
+126.415  000.363: sourcing vimrc file(s)
+127.118  000.382  000.382: sourcing /home/josiah/.config/nvim/plugged/lightline.vim/plugin/lightline.vim
+128.550  001.291  001.291: sourcing /home/josiah/.config/nvim/plugged/vim-abolish/plugin/abolish.vim
+129.025  000.342  000.342: sourcing /home/josiah/.config/nvim/plugged/vim-commentary/plugin/commentary.vim
+142.284  013.143  013.143: sourcing /home/josiah/.config/nvim/plugged/vim-unimpaired/plugin/unimpaired.vim
+143.166  000.771  000.771: sourcing /home/josiah/.config/nvim/plugged/vim-ragtag/plugin/ragtag.vim
+143.865  000.581  000.581: sourcing /home/josiah/.config/nvim/plugged/vim-surround/plugin/surround.vim
+144.147  000.195  000.195: sourcing /home/josiah/.config/nvim/plugged/vimux/plugin/vimux.vim
+144.856  000.618  000.618: sourcing /home/josiah/.config/nvim/plugged/editorconfig-vim/plugin/editorconfig.vim
+145.118  000.036  000.036: sourcing /home/josiah/.config/nvim/plugged/splitjoin.vim/autoload/sj/settings.vim
+145.433  000.487  000.451: sourcing /home/josiah/.config/nvim/plugged/splitjoin.vim/plugin/splitjoin.vim
+145.875  000.360  000.360: sourcing /home/josiah/.config/nvim/plugged/vim-sleuth/plugin/sleuth.vim
+146.058  000.058  000.058: sourcing /home/josiah/.config/nvim/plugged/vim-gist/plugin/gist.vim
+146.322  000.164  000.164: sourcing /home/josiah/.config/nvim/plugged/vim-startify/plugin/startify.vim
+146.484  000.088  000.088: sourcing /home/josiah/.config/nvim/plugged/vim-bbye/plugin/bbye.vim
+146.609  000.045  000.045: sourcing /home/josiah/.config/nvim/plugged/goyo.vim/plugin/goyo.vim
+146.824  000.143  000.143: sourcing /home/josiah/.config/nvim/plugged/vim-pasta/plugin/pasta.vim
+149.730  000.019  000.019: sourcing /home/josiah/.config/nvim/plugged/vim-devicons/autoload/devicons/plugins/startify.vim
+149.766  002.860  002.841: sourcing /home/josiah/.config/nvim/plugged/vim-devicons/plugin/webdevicons.vim
+151.354  001.485  001.485: sourcing /home/josiah/.config/nvim/plugged/fzf.vim/plugin/fzf.vim
+153.359  001.904  001.904: sourcing /home/josiah/.config/nvim/plugged/vim-fugitive/plugin/fugitive.vim
+153.817  000.357  000.357: sourcing /home/josiah/.config/nvim/plugged/vim-rhubarb/plugin/rhubarb.vim
+154.027  000.083  000.083: sourcing /home/josiah/.config/nvim/plugged/vim-twiggy/plugin/twiggy.vim
+154.721  000.616  000.616: sourcing /home/josiah/.config/nvim/plugged/vim-flog/plugin/flog.vim
+155.507  000.147  000.147: sourcing /home/josiah/.config/nvim/plugged/ultisnips/autoload/UltiSnips/map_keys.vim
+155.657  000.825  000.678: sourcing /home/josiah/.config/nvim/plugged/ultisnips/plugin/UltiSnips.vim
+156.154  000.106  000.106: sourcing /home/josiah/.config/nvim/plugged/coc.nvim/autoload/coc/rpc.vim
+157.130  000.779  000.779: sourcing /home/josiah/.config/nvim/plugged/coc.nvim/autoload/coc/util.vim
+157.665  000.213  000.213: sourcing /home/josiah/.config/nvim/plugged/coc.nvim/autoload/coc/client.vim
+163.319  007.577  006.478: sourcing /home/josiah/.config/nvim/plugged/coc.nvim/plugin/coc.vim
+166.478  003.012  003.012: sourcing /home/josiah/.config/nvim/plugged/emmet-vim/plugin/emmet.vim
+167.508  000.431  000.431: sourcing /usr/share/nvim/runtime/plugin/gzip.vim
+167.556  000.016  000.016: sourcing /usr/share/nvim/runtime/plugin/health.vim
+167.737  000.161  000.161: sourcing /usr/share/nvim/runtime/plugin/man.vim
+168.864  000.445  000.445: sourcing /usr/share/nvim/runtime/pack/dist/opt/matchit/plugin/matchit.vim
+168.945  001.173  000.728: sourcing /usr/share/nvim/runtime/plugin/matchit.vim
+169.189  000.217  000.217: sourcing /usr/share/nvim/runtime/plugin/matchparen.vim
+170.123  000.913  000.913: sourcing /usr/share/nvim/runtime/plugin/netrwPlugin.vim
+170.946  000.234  000.234: sourcing /usr/share/nvim/runtime/autoload/remote/host.vim
+171.555  000.201  000.201: sourcing /usr/share/nvim/runtime/autoload/remote/define.vim
+171.672  001.303  000.868: sourcing /home/josiah/.local/share/nvim/rplugin.vim
+171.680  001.505  000.202: sourcing /usr/share/nvim/runtime/plugin/rplugin.vim
+172.058  000.317  000.317: sourcing /usr/share/nvim/runtime/plugin/shada.vim
+172.145  000.044  000.044: sourcing /usr/share/nvim/runtime/plugin/spellfile.vim
+172.454  000.278  000.278: sourcing /usr/share/nvim/runtime/plugin/tarPlugin.vim
+172.614  000.132  000.132: sourcing /usr/share/nvim/runtime/plugin/tohtml.vim
+172.679  000.034  000.034: sourcing /usr/share/nvim/runtime/plugin/tutor.vim
+173.033  000.312  000.312: sourcing /usr/share/nvim/runtime/plugin/zipPlugin.vim
+174.027  000.866  000.866: sourcing /usr/share/vim/vimfiles/plugin/fzf.vim
+174.040  003.842: loading plugins
+174.186  000.147: loading packages
+174.603  000.196  000.196: sourcing /home/josiah/.config/nvim/plugged/ultisnips/after/plugin/UltiSnips_after.vim
+174.679  000.297: loading after plugins
+174.917  000.237: inits 3
+177.173  002.257: reading ShaDa
+181.224  000.637  000.637: sourcing /usr/share/nvim/runtime/scripts.vim
+182.791  000.048  000.048: sourcing /usr/share/nvim/runtime/ftplugin/text.vim
+266.815  088.957: opening buffers
+267.361  000.472  000.472: sourcing /home/josiah/.config/nvim/plugged/lightline.vim/autoload/lightline.vim
+268.334  000.207  000.207: sourcing /home/josiah/.config/nvim/plugged/coc.nvim/autoload/coc.vim
+271.350  000.076  000.076: sourcing /home/josiah/.config/nvim/plugged/lightline.vim/autoload/lightline/tab.vim
+271.903  000.229  000.229: sourcing /home/josiah/.config/nvim/plugged/lightline.vim/autoload/lightline/colorscheme.vim
+272.661  001.152  000.924: sourcing /home/josiah/.config/nvim/plugged/vim-base16-lightline/autoload/lightline/colorscheme/base16.vim
+281.641  012.919: BufEnter autocommands
+281.648  000.007: editing files in windows
+282.428  000.781: VimEnter autocommands
+282.436  000.008: UIEnter autocommands
+283.065  000.265  000.265: sourcing /usr/share/nvim/runtime/autoload/provider/clipboard.vim
+283.076  000.375: before starting main loop
+285.455  002.379: first screen update
+285.463  000.008: --- NVIM STARTED ---

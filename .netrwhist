@@ -1,0 +1,12 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhistcnt =2
+let g:netrw_dirhist_2='/home/josiah/Work/projects/oba-node/tests'
+let g:netrw_dirhist_1='/home/josiah/Work/projects/oba-node'
+let g:netrw_dirhist_0='/home/josiah/.local/bin/statusbar'
+let g:netrw_dirhist_9='/home/josiah/Work/projects/datastructures-algorithms'
+let g:netrw_dirhist_8='/home/josiah/Work/projects/budget-fend/src'
+let g:netrw_dirhist_7='/home/josiah/Work/projects/budget-fend'
+let g:netrw_dirhist_6='/home/josiah/Work/projects/budget-fend/src'
+let g:netrw_dirhist_5='/home/josiah/Work/projects/budget-fend'
+let g:netrw_dirhist_4='/home/josiah/Work/projects/budget-bend'
+let g:netrw_dirhist_3='/home/josiah/Work/projects/bootstrap-css'
